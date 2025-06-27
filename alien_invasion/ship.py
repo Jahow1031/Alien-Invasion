@@ -11,10 +11,11 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         # Load the ship image and get its rect.
-        import os
-        
-        image_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'images', 'ship.bmp'))
-        self.image = pygame.image.load(image_path)
+         import os
+
+        image_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'images', 'ship.bmp'))
+        print(f"DEBUG - Looking for image at: {image_path}")  # << Print first!
+        self.image = pygame.image.load(image_path)  # << Then try to load it
 
         self.rect = self.image.get_rect()
 
