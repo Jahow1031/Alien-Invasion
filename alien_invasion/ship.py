@@ -12,7 +12,8 @@ class Ship:
 
         # Load the ship image and get its rect.
         import os
-        image_path = os.path.join(os.path.dirname(__file__), 'images', 'ship.bmp')
+        
+        image_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'images', 'ship.bmp'))
         self.image = pygame.image.load(image_path)
 
         self.rect = self.image.get_rect()
